@@ -19,7 +19,7 @@ public class GlobalCacheHelper {
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalCacheHelper.class);
 
     @Autowired private CacheService cacheService;
-    private static ConcurrentSkipListSet<String> needToDeleteKeySet = new ConcurrentSkipListSet();
+    private static ConcurrentSkipListSet<String> needToDeleteKeySet = new ConcurrentSkipListSet<>();
 
     @Scheduled(fixedDelay = 1000)
     private void cacheDelete(){

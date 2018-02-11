@@ -3,7 +3,7 @@ package spring.cloud.account.config;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import spring.cloud.account.config.interceptors.GlobalAspectInteceptor;
+import spring.cloud.account.config.interceptors.GlobalAspectInterceptor;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -17,9 +17,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RefreshScope
 public class GlobalBeanConfig {
 
-    @Bean(name = "loggerInteceptor")
-    public GlobalAspectInteceptor getLoggerInteceptor() {
-        return new GlobalAspectInteceptor();
+    @Bean(name = "loggerInterceptor")
+    public GlobalAspectInterceptor getLoggerInterceptor() {
+        return new GlobalAspectInterceptor();
     }
 
     @Bean

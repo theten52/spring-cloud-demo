@@ -22,7 +22,7 @@ public class InteceptorAdder extends WebMvcConfigurerAdapter {
     @Autowired private FastJsonHttpMessageConverter4 fastConverter;
     @Autowired private ByteArrayHttpMessageConverter byteArrayHttpMessageConverter;
 
-	@Autowired private GlobalAspectInteceptor globalAspectInteceptor;
+	@Autowired private GlobalAspectInterceptor globalAspectInterceptor;
 	@Autowired private LocaleChangeInterceptor localeChangeInterceptor;
 
 	private static final String[] CLASSPATH_RESOURCE_LOCATIONS = new String[]{
@@ -39,7 +39,7 @@ public class InteceptorAdder extends WebMvcConfigurerAdapter {
 		/*
 		 /**表示拦截/下的所有路径， /*表示只拦截/下的一级路径  
 		 */
-		registry.addInterceptor(globalAspectInteceptor).addPathPatterns("/**");
+		registry.addInterceptor(globalAspectInterceptor).addPathPatterns("/**");
 		registry.addInterceptor( localeChangeInterceptor );
 	}
 

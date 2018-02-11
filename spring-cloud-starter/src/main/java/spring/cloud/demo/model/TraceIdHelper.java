@@ -11,8 +11,8 @@ import com.google.common.base.Strings;
  */
 public class TraceIdHelper {
 
-    private static ThreadLocal<String> traceIdHolder = new ThreadLocal<String>();
-    private static ThreadLocal<String> remoteIpHolder = new ThreadLocal<String>();
+    private static ThreadLocal<String> traceIdHolder = new ThreadLocal<>();
+    private static ThreadLocal<String> remoteIpHolder = new ThreadLocal<>();
 
     public static void setTraceId( String traceId ) {
         if ( Strings.isNullOrEmpty(traceId) ) return;

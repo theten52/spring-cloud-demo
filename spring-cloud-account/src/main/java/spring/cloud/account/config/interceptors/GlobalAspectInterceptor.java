@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
-public class GlobalAspectInteceptor implements HandlerInterceptor{
-	private static final Logger LOGGER = LoggerFactory.getLogger( GlobalAspectInteceptor.class );
-	
+public class GlobalAspectInterceptor implements HandlerInterceptor{
+	private static final Logger LOGGER = LoggerFactory.getLogger( GlobalAspectInterceptor.class );
+
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
